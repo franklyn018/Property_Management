@@ -1,3 +1,6 @@
+import dotenv from "dotenv";
+dotenv.config();
+
 import { connectDB } from "../config/db.js";
 import User from "../models/userModel.js";
 import Property from "../models/propertyModel.js";
@@ -7,7 +10,7 @@ async function createProperty() {
     await connectDB();
 
     // const tenantEmails = ["tenant1@gmail.com", "tenant2@gmail.com"]; // CHANGE THIS
-    const tenantEmails = ["tenant5@gmail.com"]; // CHANGE THIS
+    const tenantEmails = ["tenant6@gmail.com"]; // CHANGE THIS
 
     const tenants = await User.find({ email: { $in: tenantEmails } });
 
@@ -19,11 +22,11 @@ async function createProperty() {
     const tenantIds = tenants.map((tenant) => tenant._id);
 
     const property = await Property.create({ // CHANGE THIS
-      property_name: "Property D",
-      address: "Diamond Bar",
-      rent_amount: 2000,
-      rent_due_day: 30,
-      estimated_value: 400000,
+      property_name: "Property E",
+      address: "23623 Golden Springs Dr, Diamond Bar",
+      rent_amount: 2250,
+      rent_due_day: 24,
+      estimated_value: 0,
       tenant_user_ids: tenantIds,
     });
 

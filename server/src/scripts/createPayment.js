@@ -1,3 +1,6 @@
+import dotenv from "dotenv";
+dotenv.config();
+
 import { connectDB } from "../config/db.js";
 import Property from "../models/propertyModel.js";
 import Payment from "../models/paymentModel.js";

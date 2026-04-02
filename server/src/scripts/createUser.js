@@ -1,3 +1,6 @@
+import dotenv from "dotenv";
+dotenv.config();
+
 import bcrypt from "bcryptjs";
 import { connectDB } from "../config/db.js";
 import User from "../models/userModel.js";
@@ -6,8 +9,8 @@ async function createUser() {
   try {
     await connectDB();
 
-    const name = "TenantGuy5"; // CHANGE THIS
-    const email = "tenant5@gmail.com";
+    const name = "TenantGuy6"; // CHANGE THIS
+    const email = "tenant6@gmail.com";
     const plainPassword = "123";
     const role = "tenant";
 

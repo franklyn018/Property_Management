@@ -1,3 +1,6 @@
+import dotenv from "dotenv";
+dotenv.config();
+
 import { connectDB } from "../config/db.js";
 import User from "../models/userModel.js";
 import Property from "../models/propertyModel.js";
